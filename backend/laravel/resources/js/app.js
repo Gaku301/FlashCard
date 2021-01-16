@@ -6,11 +6,18 @@
 
 require('./bootstrap');
 
-import { createApp } from 'vue'
-import ExampleComponent from './components/ExampleComponent.vue'
+// import { createApp } from 'vue'
+// import ExampleComponent from './components/ExampleComponent.vue'
 
-createApp({
-    components:{
-        ExampleComponent
-    }
-}).mount('#app')
+// createApp({
+//     components:{
+//         ExampleComponent
+//     }
+// }).mount('#app')
+
+import Vue from 'vue'
+
+new Vue({
+    el: '#app',
+    template: '<h1>Hello World</h1>'
+})
