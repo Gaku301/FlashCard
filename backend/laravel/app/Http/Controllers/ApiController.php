@@ -8,7 +8,6 @@ class ApiController extends Controller
 {
     public function api(Request $request)
     {
-        dd($request);
         $api = $request->api;
     }
 
@@ -29,6 +28,11 @@ class ApiController extends Controller
         // 転送実行後、レスポンスを取得し保存
         $response = curl_exec($ch);
 
-        return view('index', ['response' => $response]);
+        // 文字列から配列に変換
+        $response_ary = json_decode($response);
+        $content = $response_ary->{'docs'}[2]->{'head'}->{'content'};
+        // dd($title);
+
+        return view('index', ['content' => $content]);
     }
 }
