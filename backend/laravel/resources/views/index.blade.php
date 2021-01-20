@@ -1,12 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="{{ App::getLocale() }}">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard One | Notika - Notika Admin Template</title>
+    <title>Flashcard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -31,6 +32,8 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('green/css/responsive.css') }}">
+
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 </head>
 
 <body>
@@ -197,6 +200,10 @@
                         <div class="website-traffic-ctn">
                             <h2><span class="counter">1,000</span></h2>
                             <p>Total Support Tickets</p>
+                            <div id="app">
+                                <example-component></example-component>
+                            </div>
+ 
                         </div>
                         <div class="sparkline-bar-stats4">2,4,8,4,5,7,4,7,3,5,7,5</div>
                     </div>
@@ -206,6 +213,7 @@
     </div>
     <!-- End Status area-->
 
+                   
     <!-- Normal Table area Start-->
     <div class="normal-table-area">
         <div class="container">
@@ -214,6 +222,7 @@
                     <div class="normal-table-list mg-t-30">
                         <div class="basic-tb-hd">
                             <h2>Hover Row</h2>
+
                         </div>
                         <div class="bsc-tbl-hvr">
                             <table class="table table-hover">
@@ -328,6 +337,8 @@
     <script src="{{ asset('green/js/main.js') }}"></script>
     <!-- footer JS -->
     <script src="{{ asset('green/js/footerFixed.js') }}"></script>
+
+    <script src="{{ mix('/js/app.js') }}"></script>
 </body>
 
 </html>

@@ -4,9 +4,13 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('./bootstrap');
 
-window.Vue = require('vue').default;
+// window.Vue = require('vue').default;
+
+import './bootstrap'
+import Vue from 'vue'
+import Example from './components/ExampleComponent'
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,4 +33,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    components:{
+        Example
+    }
 });
