@@ -26,11 +26,11 @@ class ApiController extends Controller
             'Content-Type: application/x-www-form-urlencoded;charset=UTF-8',
         ]);
         // 転送実行後、レスポンスを取得し保存
-        $response = curl_exec($ch);
+        $json_data = curl_exec($ch);
 
         // 文字列から配列に変換
-        $response_ary = json_decode($response);
-        $content = $response_ary->{'docs'}[2]->{'head'}->{'content'};
+        $jsons = json_decode($json_data);
+        $content = $jsons->{'docs'}[2]->{'head'}->{'content'};
         // dd($title);
 
         return view('index', ['content' => $content]);
