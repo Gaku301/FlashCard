@@ -4,9 +4,15 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('./bootstrap');
 
-window.Vue = require('vue').default;
+// window.Vue = require('vue').default;
+
+import './bootstrap'
+import Vue from 'vue'
+import Example from './components/ExampleComponent'
+import Header from './components/HeaderComponent'
+import Footer from './components/FooterComponent'
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,6 +26,8 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('header-component', require('./components/HeaderComponent.vue').default);
+Vue.component('footer-component', require('./components/FooterComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +37,21 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    components:{
+        Example
+    },
+});
+
+const header = new Vue({
+    el: '#header',
+    components:{
+        Header
+    }
+});
+
+const footer = new Vue({
+    el: '#footer',
+    components:{
+        Footer
+    }
 });
