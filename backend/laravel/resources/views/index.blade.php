@@ -93,13 +93,13 @@
                     <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
                         <div class="website-traffic-ctn">
                             <h2><span class="counter">1,000</span></h2>
+                            @foreach (range(0, count($contents->{'docs'})-1) as $num)
+                                
+                            <p>{{ $contents->{'docs'}[$num]->{'head'}->{'title'} }}</p>
+                            @endforeach
                             <p>Total Support Tickets</p>
-                            <div id="app">
-                                <example-component></example-component>
-                            </div>
- 
+                                
                         </div>
-                        <div class="sparkline-bar-stats4">2,4,8,4,5,7,4,7,3,5,7,5</div>
                     </div>
                 </div>
             </div>
@@ -109,90 +109,8 @@
 
                    
     <!-- Normal Table area Start-->
-    <div class="normal-table-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="normal-table-list mg-t-30">
-                        <div class="basic-tb-hd">
-                            <h2>Hover Row</h2>
-
-                        </div>
-                        <div class="bsc-tbl-hvr">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
-                                        <th>Nickname</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Alexandra</td>
-                                        <td>Christopher</td>
-                                        <td>@makinton</td>
-                                        <td>Ducky</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Madeleine</td>
-                                        <td>Hollaway</td>
-                                        <td>@hollway</td>
-                                        <td>Cheese</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Sebastian</td>
-                                        <td>Johnston</td>
-                                        <td>@sebastian</td>
-                                        <td>Jaycee</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Mitchell</td>
-                                        <td>Christin</td>
-                                        <td>@mitchell4u</td>
-                                        <td>AdskiDeAnus</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Elizabeth</td>
-                                        <td>Belkitt</td>
-                                        <td>@belkitt</td>
-                                        <td>Goat</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Benjamin</td>
-                                        <td>Parnell</td>
-                                        <td>@wayne234</td>
-                                        <td>Pokie</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Katherine</td>
-                                        <td>Buckland</td>
-                                        <td>@anitabelle</td>
-                                        <td>Wokie</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Nicholas</td>
-                                        <td>Walmart</td>
-                                        <td>@mwalmart</td>
-                                        <td>Spike</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="table">
+        <table-component></table-component>
     </div>
     <!-- End Normal Table area -->
   

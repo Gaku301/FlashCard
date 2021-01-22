@@ -29,10 +29,9 @@ class ApiController extends Controller
         $json_data = curl_exec($ch);
 
         // 文字列から配列に変換
-        $jsons = json_decode($json_data);
-        $content = $jsons->{'docs'}[2]->{'head'}->{'content'};
-        // dd($title);
+        $contents = json_decode($json_data);
+        // $content = $jsons->{'docs'}[2]->{'head'};
 
-        return view('index', ['content' => $content]);
+        return view('index', ['contents' => $contents]);
     }
 }

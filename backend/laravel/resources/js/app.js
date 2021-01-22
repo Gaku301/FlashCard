@@ -14,6 +14,7 @@ import Header from './components/HeaderComponent'
 import Footer from './components/FooterComponent'
 import MobileMenu from './components/MobileMenuComponent'
 import MainMenu from './components/MainMenuComponent'
+import Table from './components/TableComponent'
 
 /**
  * The following block of code may be used to automatically register your
@@ -30,6 +31,7 @@ Vue.component('header-component', require('./components/HeaderComponent.vue').de
 Vue.component('footer-component', require('./components/FooterComponent.vue').default);
 Vue.component('mobilemenu-component', require('./components/MobileMenuComponent.vue').default);
 Vue.component('mainmenu-component', require('./components/MainMenuComponent.vue').default);
+Vue.component('table-component', require('./components/TableComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -63,5 +65,12 @@ const mainMenu = new Vue({
     el: '#mainMenu',
     components:{
         MainMenu
+    }
+});
+
+const table = new Vue({
+    el: '#table',
+    components:{
+        Table
     }
 });
