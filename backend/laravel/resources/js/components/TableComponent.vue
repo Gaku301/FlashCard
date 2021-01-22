@@ -24,7 +24,8 @@
                                     <!-- <tr> -->
                                         <th>#</th>
                                         <td>4</td>
-                                        <td>{{ content.head }}</td>
+                                        <td>{{ content }}</td>
+                                        <td>{{  }}</td>
                                         <td>@mitchell4u</td>
                                         <td>AdskiDeAnus</td>
                                     </tr>
@@ -41,7 +42,10 @@
 <script>
 export default {
     props:{
-        contents: {},
+        value:{
+            type: Object,
+            default: () => {return new Contents}
+        }
     },
 }
 </script>

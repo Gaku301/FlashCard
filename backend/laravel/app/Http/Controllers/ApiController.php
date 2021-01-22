@@ -30,7 +30,7 @@ class ApiController extends Controller
 
         // 文字列から配列に変換
         $contents = json_decode($json_data);
-        // $content = $jsons->{'docs'}[2]->{'head'};
+        // dd($contents);
 
         return view('index', ['contents' => $contents]);
     }
