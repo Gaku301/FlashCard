@@ -11,7 +11,7 @@ class ApiController extends Controller
         $api = $request->api;
     }
 
-    public function get_api()
+    public function getApi()
     {
         $access_token = 'def43930c40f7ba453016f70b86d59323cd1475360d201c917fa14d44bacbd18';
         $url = 'https://boostnote.io/api/docs';
@@ -32,6 +32,11 @@ class ApiController extends Controller
         $contents = json_decode($json_data);
         // dd($contents);
 
-        return view('index', ['contents' => $contents]);
+        return view('table', ['contents' => $contents]);
+    }
+
+    public function show()
+    {
+        return view('welcome');
     }
 }

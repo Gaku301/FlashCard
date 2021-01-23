@@ -20,8 +20,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="content in contents">
-                                    <!-- <tr> -->
+                                    <tr>
                                         <th>#</th>
                                         <td>4</td>
                                         <td>{{ content }}</td>

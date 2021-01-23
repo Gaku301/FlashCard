@@ -1,4 +1,5 @@
 <template>
+    <!-- Start Header Top Area -->
     <div class="header-top-area">
         <div class="container">
             <div class="row">

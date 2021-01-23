@@ -14,12 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware(['auth'])->group(function () {
-    Route::get('/mypage', [ApiController::class, 'get_api'])->name('get.api');
+    Route::get('/', [ApiController::class, 'getApi'])->name('get.api');
+    Route::get('/show', [ApiController::class, 'show'])->name('show');
 
     Route::get('/dashboard', function () {
         return view('dashboard');

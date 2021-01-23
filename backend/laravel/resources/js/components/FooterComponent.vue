@@ -1,4 +1,5 @@
 <template>
+    <!-- Start Footer area-->
     <footer id="footer" class="footer-copyright-area">
         <div class="container">
             <div class="row">
@@ -11,4 +12,5 @@
             </div>
         </div>
     </footer>
+    <!-- End Footer area-->
 </template>
