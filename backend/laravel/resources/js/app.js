@@ -10,9 +10,11 @@
 
 import './bootstrap'
 import Vue from 'vue'
-import Example from './components/ExampleComponent'
 import Header from './components/HeaderComponent'
 import Footer from './components/FooterComponent'
+import MobileMenu from './components/MobileMenuComponent'
+import MainMenu from './components/MainMenuComponent'
+import Table from './components/TableComponent'
 
 /**
  * The following block of code may be used to automatically register your
@@ -25,9 +27,11 @@ import Footer from './components/FooterComponent'
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('header-component', require('./components/HeaderComponent.vue').default);
 Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+Vue.component('mobilemenu-component', require('./components/MobileMenuComponent.vue').default);
+Vue.component('mainmenu-component', require('./components/MainMenuComponent.vue').default);
+Vue.component('table-component', require('./components/TableComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -35,12 +39,6 @@ Vue.component('footer-component', require('./components/FooterComponent.vue').de
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-    components:{
-        Example
-    },
-});
 
 const header = new Vue({
     el: '#header',
@@ -53,5 +51,26 @@ const footer = new Vue({
     el: '#footer',
     components:{
         Footer
+    }
+});
+
+const mobileMenu = new Vue({
+    el: '#mobileMenu',
+    components:{
+        MobileMenu
+    }
+});
+
+const mainMenu = new Vue({
+    el: '#mainMenu',
+    components:{
+        MainMenu
+    }
+});
+
+const table = new Vue({
+    el: '#table',
+    components:{
+        Table
     }
 });
