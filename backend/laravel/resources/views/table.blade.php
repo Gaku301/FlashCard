@@ -22,7 +22,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach (range(0, count($contents->{'docs'})-1) as $num)
-                                    <tr data-href="{{ route('show') }}">
+                                    <tr data-href="{{ route('show',['num' => $num])}}">
                                         <td>{{ $contents->{'docs'}[$num]->{'head'}->{'id'} }}</td>
                                         <td>{{ $contents->{'docs'}[$num]->{'head'}->{'title'} }}</td>
                                         <td>{{ $contents->{'docs'}[$num]->{'head'}->{'createdAt'} }}</td>

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [ApiController::class, 'getApi'])->name('get.api');
-    Route::get('/show', [ApiController::class, 'show'])->name('show');
+    Route::get('/show/{num}', [ApiController::class, 'show'])->name('show');
 
     Route::get('/dashboard', function () {
         return view('dashboard');
