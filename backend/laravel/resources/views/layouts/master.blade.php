@@ -82,8 +82,16 @@
 
     <script src="{{ mix('/js/app.js') }}"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     @yield('script')
 
+    <script>
+    $(document).ready(function(){
+    console.log('aaaaaaa');
+
+    });
+    </script>
 </body>
 
 </html>
