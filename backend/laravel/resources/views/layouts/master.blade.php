@@ -86,12 +86,6 @@
 
     @yield('script')
 
-    <script>
-    $(document).ready(function(){
-    console.log('aaaaaaa');
-
-    });
-    </script>
 </body>
 
 </html>
