@@ -24,7 +24,6 @@
                                         <th>#</th>
                                         <td>4</td>
                                         <td>{{ content }}</td>
-                                        <td>{{  }}</td>
                                         <td>@mitchell4u</td>
                                         <td>AdskiDeAnus</td>
                                     </tr>

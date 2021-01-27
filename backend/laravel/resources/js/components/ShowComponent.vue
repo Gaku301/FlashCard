@@ -1,32 +1,5 @@
-@extends('layouts.master')
-
-@section('content')
-    
-	<!-- Breadcomb area Start-->
-	<div class="breadcomb-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="breadcomb-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<div class="breadcomb-wp">
-									<div class="breadcomb-icon">
-										<i class="notika-icon notika-mail"></i>
-									</div>
-									<div class="breadcomb-ctn">
-										<h2>Show</h2>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Breadcomb area End-->
-    <!-- Inbox area Start-->
+<template>
+   <!-- Inbox area Start-->
     <div class="inbox-area">
         <div class="container">
             <div class="row">
@@ -58,7 +31,9 @@
                         </div>
                         <div class="mail-ads mail-vw-ph">
                         </div>
-                        <div class="view-mail-atn" id="result">
+                        <div class="view-mail-atn">
+                            <h2>{{ $content->{'title'} }}</h2>
+                            <p>{{ $content->{'content'} }}</p>
                         </div>
                         <div class="file-download-system">
                             <div class="dw-st-ic mg-t-20">
@@ -84,21 +59,14 @@
         </div>
     </div>
     <!-- Inbox area End-->
+</template>
 
-@endsection
-
-@section('script')
-{{-- markdownk->html 参考ページ（https://qiita.com/_carbonara_/items/274b26ae45c7d4372bdf）--}}
 <script>
-$(document).ready(function(){
-    // laravelからのデータ
-    const content = @json($content->{'content'});
-    // 上記のデータをhtmlへ変換
-    var html = marked(content);
+export default {
 
-    // 結果を表示
-    $('#result').html(html);
-});
-        
+}
 </script>
-@endsection
+
+<style>
+
+</style>
