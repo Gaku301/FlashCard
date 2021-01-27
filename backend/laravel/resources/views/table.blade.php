@@ -44,7 +44,6 @@
 <script>
     $('tr[data-href]').addClass('clickable')
         .click(function(e){
-            console.log('jjjj');
             if(!$(e.target).is('a')){
                 window.location = $(e.target).closest('tr').data('href');
             }
