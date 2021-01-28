@@ -33,7 +33,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div class="inbox-left-sd">
 						<div class="compose-ml">
-                            <a class="btn" href="#">Compose</a>
+                            <a class="btn" href="{{ route('showCard',['num' => $num]) }}">Compose</a>
                         </div>
                         <div class="inbox-status">
                             <ul class="inbox-st-nav inbox-ft">
@@ -66,7 +66,7 @@
                                     <span><i class="notika-icon notika-paperclip"></i> 4 attachments <i class="notika-icon notika-arrow-right atc-sign"></i></span>
                                 </div>
                                 <div class="dw-atc-sn">
-                                    <a class="btn dw-al-ft" href="#">Download all in zip format <i class="notika-icon notika-file"></i></a>
+                                    <a class="btn dw-al-ft" href="#">Create Card</a>
                                 </div>
                             </div>
                         </div>

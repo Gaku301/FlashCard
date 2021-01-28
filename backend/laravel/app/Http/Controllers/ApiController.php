@@ -33,8 +33,14 @@ class ApiController extends Controller
     public function show(int $num)
     {
         $content = $this->contents->{'docs'}[$num]->{'head'};
-        // dd($content);
 
-        return view('show', ['content' => $content]);
+        return view('show', ['content' => $content, 'num' => $num]);
+    }
+
+    public function showCard(int $num)
+    {
+        $content = $this->contents->{'docs'}[$num]->{'head'}->{'content'};
+        $words = explode('---', $content);
+        dd($words);
     }
 }
