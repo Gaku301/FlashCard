@@ -40,7 +40,15 @@ class ApiController extends Controller
     public function showCard(int $num)
     {
         $content = $this->contents->{'docs'}[$num]->{'head'}->{'content'};
-        $words = explode('---', $content);
-        dd($words);
+        $cards = explode('---', $content);
+        $h4 = '####';
+        $flashcard = [];
+        foreach ($cards as $card) {
+            if (strpos($card, $h4)) {
+                $words = explode('/', $card);
+                array_push($flashcard, $words);
+            }
+        }
+        dd($flashcard);
     }
 }

@@ -25,7 +25,11 @@
 			</div>
 		</div>
 	</div>
-	<!-- Breadcomb area End-->
+    <!-- Breadcomb area End-->
+    
+    <div id="show">
+        <show-component :content="{{ json_encode($content->{'title'}) }}"></show-component>
+    </div>
     <!-- Inbox area Start-->
     <div class="inbox-area">
         <div class="container">
