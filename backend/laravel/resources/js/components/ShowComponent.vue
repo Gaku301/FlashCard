@@ -23,17 +23,17 @@
                     <div class="view-mail-list sm-res-mg-t-30">
                         <div class="view-mail-hd">
                             <div class="view-mail-hrd">
-                                <h2>{{ $content->{'title'} }}</h2>
+                                <h2>{{ content }}</h2>
                             </div>
                             <div class="view-ml-rl">
-                                <p>{{ $content->{'createdAt'} }}</p>
+                                <p></p>
                             </div>
                         </div>
                         <div class="mail-ads mail-vw-ph">
                         </div>
                         <div class="view-mail-atn">
-                            <h2>{{ $content->{'title'} }}</h2>
-                            <p>{{ $content->{'content'} }}</p>
+                            <h2></h2>
+                            <p></p>
                         </div>
                         <div class="file-download-system">
                             <div class="dw-st-ic mg-t-20">
@@ -63,7 +63,12 @@
 
 <script>
 export default {
-
+    props:{
+        content: {},
+    },
+    mounted(){
+        console.log($this.content);
+    }
 }
 </script>
 

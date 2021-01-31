@@ -15,6 +15,7 @@ import Footer from './components/FooterComponent'
 import MobileMenu from './components/MobileMenuComponent'
 import MainMenu from './components/MainMenuComponent'
 import Table from './components/TableComponent'
+import Show from './components/ShowComponent'
 
 /**
  * The following block of code may be used to automatically register your
@@ -32,6 +33,7 @@ Vue.component('footer-component', require('./components/FooterComponent.vue').de
 Vue.component('mobilemenu-component', require('./components/MobileMenuComponent.vue').default);
 Vue.component('mainmenu-component', require('./components/MainMenuComponent.vue').default);
 Vue.component('table-component', require('./components/TableComponent.vue').default);
+Vue.component('show-component', require('./components/ShowComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -72,5 +74,12 @@ const table = new Vue({
     el: '#table',
     components:{
         Table
+    }
+});
+
+const show = new Vue({
+    el: '#show',
+    components:{
+        Show
     }
 });
